@@ -1,1 +1,0 @@
-[{"email":"entusiasta@yahoo.com","text":"Qué buena calculadora!","date":"27 March 2021, 3:08:37 pm"},{"email":"amadeosou@gmail.com","text":"la tenes en azul?","date":"27 March 2021, 3:08:48 pm"},{"email":"admin1@admin.com","text":"No, no me quedaron","date":"27 March 2021, 3:09:09 pm"},{"email":"admin1@admin.com","text":"No rompas las bolas","date":"27 March 2021, 3:09:17 pm"}]

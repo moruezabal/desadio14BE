@@ -2,9 +2,11 @@
   "name": "12-websocket-parte1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ServerES6toJS5": "babel server.es6.js -o server.js -w",
+    "ServerTStoJS5": ".\\node_modules\\.bin\\tsc -w",
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,13 @@
     "express": "^4.17.1",
     "moment": "^2.29.1",
     "nodemon": "^2.0.7",
-    "socket.io": "^4.0.0"
+    "socket.io": "^4.0.0",
+    "typescript": "^4.2.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@types/node": "^14.14.37"
   }
 }

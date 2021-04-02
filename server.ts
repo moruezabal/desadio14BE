@@ -11,25 +11,25 @@ app.use(express.static('public'));
 
 let almacen = new Inventario();
 
-let messages = [];
+let messages:Array<Object> = [];
 
-io.on("connection", (socket) =>{
+io.on("connection", (socket: any) =>{
     let products = almacen.getProductos();
     socket.emit('listProducts', products);
     socket.emit('messages', messages);
 
-    socket.on('new-product', function(data){
+    socket.on('new-product', function(data:Object){
         almacen.addProducto(data);
         products = almacen.getProductos();
         io.sockets.emit('listProducts', products);
     })
 
-    socket.on('new-message', function(data){
+    socket.on('new-message', function(data:Object){
        messages.push(data);
        let json = JSON.stringify(messages)
 
        fs.promises.writeFile("Lista de productos.txt",json)
-           .then(console.log("Producto guardado con éxito"));
+           .then(console.log("Mensaje guardado con éxito"));
        
        io.sockets.emit('messages', messages);
     
