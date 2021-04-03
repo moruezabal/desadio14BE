@@ -31,10 +31,7 @@ io.on("connection", (socket) =>{
            .then(console.log("Mensaje guardado con éxito"));
        
        io.sockets.emit('messages', messages);
-    
     })
-
-
 })
 
 http.listen(port, () => {
